@@ -1,0 +1,10 @@
+$TTL 3000h
+@		IN		SOA			friendsoft.ru.		admin.friendsoft.ru. (
+							201605240
+							10h
+							1h
+							1w
+							1h )
+
+		IN		NS			ns1.friendsoft.ru.
+1		IN		PTR			friendsoft.ru.
