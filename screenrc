@@ -11,6 +11,7 @@ startup_message off
 #defflow on # will force screen to process ^S/^Q
 #deflogin on
 autodetach on
+defshell bash
 
 defscrollback 1000
 
