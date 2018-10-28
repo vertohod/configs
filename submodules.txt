@@ -1,0 +1,4 @@
+https://github.com/weidai11/cryptopp.git
+https://github.com/google/googletest.git
+https://github.com/Tencent/rapidjson.git
+https://github.com/zaphoyd/websocketpp.git
