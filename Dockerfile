@@ -1,22 +1,21 @@
-# Наследуемся от Ubuntu                                                                                                                                                                                                                       
-FROM ubuntu                                                                                                                                                                                                                                   
-WORKDIR /root                                                                                                                                                                                                                                 
+# Наследуемся от Ubuntu
+FROM ubuntu
 
+WORKDIR /root
 USER root
 
 # Установка необходимого ПО
-RUN apt-get update
-RUN apt-get install curl -y
-RUN apt-get install screen -y
-RUN apt-get install vim -y
-RUN apt-get install g++ -y
-RUN apt-get install libboost-all-dev -y
-RUN apt-get install cmake -y
-RUN apt-get install git -y
-RUN apt-get clean
-RUN apt-get purge
+RUN apt-get update && apt-get install -y \
+  curl \
+  screen \
+  vim \
+  g++ \
+  libboost-all-dev \
+  cmake \
+  git \
+  && apt-get clean && apt-get purge
 
-# Настрофка среды
+# Настройка среды
 RUN git -C /root clone https://github.com/vertohod/configs.git
 RUN cp /root/configs/vimrc /root/.vimrc
 RUN cp /root/configs/screenrc /etc/screenrc
